@@ -56,6 +56,7 @@ export default function Login() {
   }
 
   const googleLogin = useGoogleLogin({
+    flow: 'implicit',
     onSuccess: async (tokenResponse) => {
       try {
         const googleUser = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
