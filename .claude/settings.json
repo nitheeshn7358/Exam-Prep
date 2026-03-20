@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/docs)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s -X POST http://localhost:8000/auth/signup -H \"Content-Type: application/json\" -d '{\"\"\"\"name\"\"\"\":\"\"\"\"Test User\"\"\"\",\"\"\"\"email\"\"\"\":\"\"\"\"test@test.com\"\"\"\",\"\"\"\"password\"\"\"\":\"\"\"\"password123\"\"\"\",\"\"\"\"grade\"\"\"\":10}')",
+      "Bash(curl -s -X POST http://localhost:8000/auth/login -H \"Content-Type: application/json\" -d '{\"\"\"\"email\"\"\"\":\"\"\"\"test@test.com\"\"\"\",\"\"\"\"password\"\"\"\":\"\"\"\"password123\"\"\"\"}')",
+      "Bash(grep '\"\"axios\"\"' package.json)",
+      "Bash(lsof -ti:5173)",
+      "Bash(pip3 list:*)",
+      "Bash(timeout 8 python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000)",
+      "Bash(python3 -c \"from app.main import app; print\\(''Backend imports OK''\\)\")",
+      "Bash(export PATH=$PATH:/Library/PostgreSQL/18/bin)",
+      "Bash(psql -U postgres -d examprep -c \"\\\\dt\")",
+      "Bash(PGPASSWORD=Nith270910 psql -U postgres -d examprep -c \"\\\\dt\")",
+      "Bash(PGPASSWORD=Nith270910 psql -U postgres -d examprep -c \"SELECT id, name, email FROM users;\")",
+      "Bash(curl -s -o /dev/null -w %{http_code} http://localhost:5173)",
+      "Bash(python3 -c \"from dotenv import load_dotenv; import os; load_dotenv\\(\\); key = os.getenv\\(''ANTHROPIC_API_KEY''\\); print\\(''Key starts with:'', key[:20] if key else ''NOT FOUND''\\)\")",
+      "Bash(python3 -c \"from dotenv import load_dotenv; import os; load_dotenv\\(\\); key = os.getenv\\(''ANTHROPIC_API_KEY''\\); print\\(''Length:'', len\\(key\\) if key else 0\\); print\\(''Starts with:'', key[:30] if key else ''NOT FOUND''\\)\")",
+      "Read(//Users/nnitheesh/Python /exam prep 1 /**)",
+      "Bash(PGPASSWORD=Nith270910 psql -U postgres -d examprep -c \":*)",
+      "WebFetch(domain:minute-ai.com)",
+      "Bash(PGPASSWORD=Nith270910 psql -U postgres -d examprep -c \"ALTER TABLE sessions ADD COLUMN IF NOT EXISTS violations INTEGER DEFAULT 0;\")",
+      "Read(//Users/nnitheesh/**)",
+      "Bash(npx tsc:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(ls -la \"/Users/nnitheesh/Python \"*)",
+      "Bash(python -c \":*)",
+      "Bash(psql \"postgresql://postgres:Nith270910@localhost:5432/examprep\" -c \"UPDATE users SET plan = ''pro'' WHERE email = ''nitheeshn7358@gmail.com'' RETURNING id, email, plan;\")",
+      "Bash(psql \"postgresql://postgres:Nith270910@localhost:5432/examprep\" -c \":*)",
+      "Bash(python migrate_subjects.py)",
+      "Bash(python3 migrate_subjects.py)",
+      "Bash(ls /usr/local/bin/python*)",
+      "Bash(ls /opt/homebrew/bin/python*)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python migrate_subjects.py)",
+      "Bash(PGPASSWORD=Nith270910 psql -U postgres -d examprep -h localhost -c \":*)",
+      "Bash(PGPASSWORD=Nith270910 psql -U postgres -d examprep -h localhost -c \"ALTER TABLE notes ADD COLUMN IF NOT EXISTS file_size INTEGER NOT NULL DEFAULT 0;\")",
+      "Bash(npx vite:*)",
+      "Bash(sed -i '' 's/from-purple-500\\\\/40 via-purple-700\\\\/50 to-black/from-blue-600\\\\/40 via-blue-800\\\\/50 to-black/g;:*)",
+      "Bash(__NEW_LINE_ef944211186b79a5__ sed -i '' 's/from-purple-500\\\\/40 via-purple-700\\\\/50 to-black/from-blue-600\\\\/40 via-blue-800\\\\/50 to-black/g;:*)",
+      "Bash(__NEW_LINE_ef944211186b79a5__ sed -i '' 's/from-indigo-600 to-purple-600/from-blue-500 to-blue-700/g;:*)",
+      "Bash(sed -i '' 's/className=\"\"w-full max-w-sm relative z-10\"\"/className=\"\"w-full max-w-md relative z-10\"\"/' \"/Users/nnitheesh/Python /exam prep 1 /frontend/src/pages/Auth/Login.jsx\")",
+      "Bash(__NEW_LINE_75be2673d4aae47b__ sed:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/nnitheesh/Python /exam prep 1 ",
+      "/Users/nnitheesh/Python /exam prep 1 /changes"
+    ]
+  }
+}
