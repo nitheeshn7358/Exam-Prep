@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import AppLayout from '../../components/layout/AppLayout'
 import api from '../../api/api'
@@ -171,9 +172,9 @@ export default function Support() {
             </div>
             <div className="flex flex-col gap-2 shrink-0">
               {QUICK_LINKS.map(link => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   className="flex items-center gap-3 bg-white/15 hover:bg-white/25 transition-colors rounded-xl px-4 py-2.5 text-sm font-medium"
                 >
                   <span>{link.icon}</span>
@@ -181,7 +182,7 @@ export default function Support() {
                     <p className="font-semibold leading-tight">{link.label}</p>
                     <p className="text-blue-100 text-xs leading-tight">{link.desc}</p>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
