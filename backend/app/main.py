@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth, notes, questions, sessions, dashboard, analytics, subjects, payments, support
+from app.routers import auth, notes, questions, sessions, dashboard, analytics, subjects, payments, support, admin
 from app.database import engine, Base
 import app.models  # noqa: F401 — ensures models are registered
 
@@ -28,6 +28,7 @@ app.include_router(analytics.router, prefix="/analytics", tags=["analytics"])
 app.include_router(subjects.router, prefix="/subjects", tags=["subjects"])
 app.include_router(payments.router, prefix="/payments", tags=["payments"])
 app.include_router(support.router, prefix="/support", tags=["support"])
+app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 @app.get("/")
 def root():
