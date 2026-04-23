@@ -12,5 +12,3 @@ A web application designed to help users prepare for exams through quizzes, note
 ## 🛠 Tech Stack
 - Frontend: React (or whatever you used)
 - Backend: Node.js / Python
-- Database: (if any)
-- AI: (if used)
